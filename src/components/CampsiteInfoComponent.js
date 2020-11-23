@@ -5,7 +5,6 @@ class CampsiteInfo extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
         };
     }
 
@@ -24,7 +23,6 @@ class CampsiteInfo extends Component {
     }
 
     renderComments (comments) {
-
         if (comments) {
             return (
                 <div className="col-md-5 m-1">
@@ -46,9 +44,11 @@ class CampsiteInfo extends Component {
         const campsite = this.props.campsite
         if (campsite) {
             return (
-                <div className="row">
-                    {this.renderCampsite(this.props.campsite)}
-                    {this.renderComments(this.props.campsite)}
+                <div className="container">
+                    <div className="row">
+                        {this.renderCampsite(this.props.campsite)}
+                        {this.renderComments(this.props.campsite)}
+                    </div>
                 </div>
             );
         }
