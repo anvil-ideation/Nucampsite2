@@ -143,7 +143,7 @@ class Contact extends Component {
                                             isNumber,
                                         }}
                                     />
-                                                                        <Errors 
+                                    <Errors 
                                         className="text-danger"
                                         model=".phoneNum"
                                         show="touched"

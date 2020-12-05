@@ -30,5 +30,14 @@ export const CAMPSITES = [
         elevation: 42,
         featured: true,
         description: "You'll never want to leave this hidden gem, deep within the lush Redux Woods."
-    }
+    },
+    /*{
+        id: 4,
+        name:"Christmas Cookie Campground",
+        image: "https://images.unsplash.com/photo-1607162502705-b3462b223df7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1548&q=80g",
+        elevation: 4215,
+        featured: false,
+        description: "Santa literally comes here for his holidays!"
+
+    }*/
 ];
