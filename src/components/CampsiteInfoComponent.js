@@ -35,7 +35,7 @@ class CommentForm extends Component {
 
     handleSubmit(values) {
         this.toggleModal();
-        this.props.postComment(this.props.campsiteID, values.rating, values.author, values.text);
+        this.props.postComment(this.props.campsiteId, values.rating, values.author, values.text);
     }
 
     render() {
@@ -52,8 +52,7 @@ class CommentForm extends Component {
                             <LocalForm onSubmit={values => this.handleSubmit(values)}>
                                 <div className="form-group">
                                     <Label htmlFor="rating">Rating</Label>
-                                    <Control.select model=".rating" className="form-control" id="rating" name="rating" 
-                                    >
+                                    <Control.select model=".rating" className="form-control" id="rating" name="rating">
                                         <option value="null">Choose One</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -127,7 +126,7 @@ function RenderCampsite({campsite}) {
     );
 }
 
-function RenderComments ({comments, postComment, campsiteID}) {
+function RenderComments({comments, postComment, campsiteId}) {
     if (comments) {
         return (
             <div className="col-md-5 m-1">
@@ -148,7 +147,7 @@ function RenderComments ({comments, postComment, campsiteID}) {
                         })
                     }
                 </Stagger>
-                <CommentForm campsiteID={campsiteID} postComment={postComment} />
+                <CommentForm campsiteId={campsiteId} postComment={postComment} />
             </div>
         );
     }
@@ -197,10 +196,10 @@ function CampsiteInfo(props) {
                 </div>
                 <div className="row">
                     <RenderCampsite campsite={props.campsite} />
-                    <RenderComments 
-                        comments={props.comments} 
+                    <RenderComments
+                        comments={props.comments}
                         postComment={props.postComment}
-                        campsiteID={props.campsite.id}
+                        campsiteId={props.campsite.id}
                     />
 
                 </div>
