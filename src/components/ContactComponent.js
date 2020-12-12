@@ -4,6 +4,7 @@ import { Breadcrumb, BreadcrumbItem,
 import { Link } from 'react-router-dom';
 import { Control, Form, Errors } from 'react-redux-form';
 
+
 const required = val => val && val.length;
 const maxLength = len => val => !val || (val.length <= len);
 const minLength = len => val => val && (val.length >= len);
@@ -14,22 +15,6 @@ class Contact extends Component {
 
     constructor(props) {
         super(props);
-
-        this.state= {
-            firstName: '',
-            lastName: '',
-            phoneNum: '',
-            email: '',
-            agree: false,
-            contactType: 'By Phone',
-            feedback: '',
-            touched: {
-                firstName: false,
-                lastName: false,
-                phoneNum: false,
-                email: false,
-            }
-        };
 
         this.handleSubmit = this.handleSubmit.bind(this);
 
